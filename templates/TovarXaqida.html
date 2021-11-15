@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Admin Panel - Xaridor xaqida {% endblock title %}
+
+{% block content %}
+
+<div class="right_col" role="main">
+  <div class="">
+      <div class="clearfix"></div>
+
+      <div class="row">
+          <div class="col-md-12 col-sm-12">
+
+              <div class="x_panel mt-5">
+                  <div class="x_title">
+                      <h2>Tovar </h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                          </li>
+                          <li><a class="close-link"><i class="fa fa-close"></i></a>
+                          </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                      <form class="" action="" method="post" novalidate>
+                          
+<!--                                         <span class="section"></span>
+-->                                    <div class="col-sm-4">
+                          {% if object.rasm %}
+                              <img src="{{ object.rasm.url }}"  class="w-100 img-responsive d-block m-auto img-fluid rounded">
+                          {% endif %}
+                          </div>
+
+                          <div class="col-sm-8 text-left">
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Nomi<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" placeholder="{{ object.nomi }}" name="name" required="required" disabled/>
+                              </div>
+                          </div>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Rangi<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" placeholder="{{ object.rangi }}" class='optional' type="text" disabled/></div>
+                          </div>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Xotirasi<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" placeholder="{{ object.xotirasi }}" class='optional' required="required" type="text" disabled /></div>
+                          </div>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Narxi<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" name="text" class='text' required="required" type="text" placeholder="{{ object.narxi }} so'm" disabled /></div>
+                          </div>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Kategoriya<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" placeholder="{{ object.category }}" type="text" class='text' required='required'  disabled/></div>
+                          </div>
+
+                        </div>
+                      </form>
+                  </div>   
+                </div> 
+                  <a href="{% url 'tovarDelete' object.pk %}" class="btn btn-outline-danger float-right">O'chirish</a><a href="{% url 'tovarEdit' object.pk %}" class="btn btn-outline-primary float-right">Tahrirlash</a>
+            </div>
+      </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'js/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'js/nprogress.js' %}"></script>
+<!-- jQuery custom content scroller -->
+<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<script src="{% static 'js/raphael/raphael.min.js"></script>
+<script src="{% static 'js/morris.js/morris.min.js' %}"></script>
+
+<script src="{% static 'js/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="{% static 'js/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="{% static 'js/custom.min.js' %}"></script>
+
+{% endblock content %}

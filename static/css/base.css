@@ -1,0 +1,711 @@
+::selection {
+    cursor: auto;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    background: #F8F9FA;
+    overflow-x: hidden;
+}
+
+@keyframes Logo {
+    0% {
+        transform: scale(0.9);
+    }
+    25% {
+        transform: scale(1);
+    }
+    /* 75% {
+        transform: scale(1.1);
+    } */
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+header {
+    background: #1EAAF1;
+}
+
+header .container {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: relative;
+}
+
+.Logo {
+    width: 30% !important;
+    animation-name: Logo;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+header a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+.spanOne {
+    position: absolute;
+    left: 0;
+}
+
+.spanTwo {
+  display: block;
+  margin: auto;    
+    
+}
+.spanThree{
+  position: absolute;
+  right: 0;
+}
+
+nav {
+    height: 0vh;
+    /* position: sticky;
+    top: 0;
+    left: 0;
+    right: 0; */
+}
+
+.carousel-item img{
+    width: 100vw;
+    height: auto;
+}
+
+.carousel-item .img {
+    height: 100% !important;
+}
+
+.testimonials{
+    border: 1px solid #1EAAF1f9;
+    color: rgba(10, 198, 255, 0.81);
+    height: 43vh;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    transition-delay: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comfortIcon {
+    transform: translateY(35px);
+    background: cadetblue;
+    z-index: 2 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.row {
+    position: relative;
+}
+
+.shadow {
+    height: 43vh;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    width: 200%;
+    height: 200%;
+    border-radius: 20%;
+    /* background: #A5D0F9; */
+    background: rgba(10, 198, 255, 0.81);
+    transition: 1s;
+    z-index: -1;
+}
+
+.testimonials:hover {
+    color: #fff;
+}
+
+.testimonials:hover .shadow {
+    top: -40%;
+    left: -40%;
+    transition: 1s;
+    border-radius: 50%;
+    transition-delay: 0.5s;
+}
+
+.shadowTwo {
+    height: 43vh;
+    position: absolute;
+    bottom: 80%;
+    right: 80%;
+    width: 200%;
+    height: 200%;
+    border-radius: 20%;
+    background: rgba(10, 198, 255, 0.81);
+    transition: 1s;
+    z-index: -1;
+}
+
+.testimonials:hover .shadowTwo {
+    bottom: -40%;
+    right: -40%;
+    transition: 1s;
+    border-radius: 50%;
+    transition-delay: 0.5s;
+}
+
+.shadowThree {
+    height: 43vh;
+    position: absolute;
+    top: 80%;
+    right: 80%;
+    width: 200%;
+    height: 200%;
+    border-radius: 20%;
+    background: rgba(10, 198, 255, 0.81);
+    transition: 1s;
+    z-index: -1;
+}
+
+.testimonials:hover .shadowThree {
+    top: -40%;
+    right: -40%;
+    transition: 1s;
+    border-radius: 50%;
+    transition-delay: 0.5s;
+}
+
+.shadowFour{
+    height: 43vh;
+    position: absolute;
+    bottom: 80%;
+    left: 80%;
+    width: 200%;
+    height: 200%;
+    border-radius: 20%;
+    background: rgba(10, 198, 255, 0.81);
+    transition: 1s;
+    z-index: -1;
+}
+
+.testimonials:hover .shadowFour {
+    bottom: -40%;
+    left: -40%;
+    transition: 1s;
+    border-radius: 50%;
+    transition-delay: 0.5s;
+}
+
+.imageSection {
+    width: 95vw;
+    height: 50vh;
+    margin: auto;
+    border-radius: 10px;
+    background-image: url('../images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* background-position-x: -28px; */
+} 
+
+.card {
+    border: none;
+    margin: 0 30px;
+}
+
+.Products h4 {
+    margin-left: 30px;
+}
+
+.imageSectionTwo {
+    width:95vw;
+    height: 50vh;
+    display: block;
+    margin: auto;
+    background-image: url('../images/Carousel/829212.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position-x: -28px; */
+    background-position: center center;
+}
+
+.imageSection {
+    width: 95vw;
+    height: 50vh;
+    margin: auto;
+    border-radius: 10px;
+    background-image: url('../images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-position-x: -28px;
+} 
+
+.imageSectionThree{
+    width: 95vw;
+    height: 50vh;
+    margin: auto;
+    border-radius: 10px;
+    background-image: url('../images/oshxona.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; 
+    background-position-x: -28px;
+}
+
+#Map {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(51, 51, 51, 0.164);
+    border-left: none;
+    border-right: none;
+}
+
+#Contact {
+    width: 100vw;
+    background: linear-gradient(to bottom, #1EAAF1, #fff);
+    position: relative;
+}
+
+.col-md-4 {
+    position: relative;
+}
+
+#Contact form input,
+#Contact form span{
+    margin-bottom: 10px;
+}
+
+#Contact textarea {
+    resize: none;
+    height: 120px;
+}
+
+#Contact p {
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+.card {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.card .btn {
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    width: 90%;
+}
+
+#Phone {
+    background: #1EAAF1f9;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    animation-name: btnAnimated;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes btnAnimated {
+    0%{
+        transform: scale(1);
+        transform: rotate(5deg);
+    }
+    3%{
+        transform: rotate(-5deg);
+    }
+    6%{
+        transform: rotate(10deg);
+    }
+    10%{
+        transform: scale(1.2);
+        transform: rotate(-10deg);
+        /* border: 0px solid #1EAAF1f9; */
+    }
+    13%{
+        transform: rotate(15deg);
+    }
+    16%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: scale(0.8);
+        /* border: 10px solid #1EAAF1f9; */
+    }
+    23%{
+        transform: rotate(10deg);
+    }
+    26%{
+        transform: rotate(-10deg);
+    }
+    29%{
+        transform: rotate(5deg);
+        /* border: 1px solid #1EAAF1f9; */
+    }
+    30%{
+        transform: scale(1);
+        border: none;
+    }
+
+}
+
+
+@font-face {
+    font-family: pirulen;
+    src: url(https://raw.githubusercontent.com/th3knigh7/css-design/black-bg/pirulen.ttf);
+	
+	}
+	@font-face{
+	font-family: destructob;
+    src: url(https://raw.githubusercontent.com/th3knigh7/css-design/black-bg/destructob.ttf);
+    
+	}
+	
+	body{
+background-image:url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+	}
+	
+	nav li a{
+		color:black;
+		text-decoration: none;
+	transition: letter-spacing .5s;
+	}
+	
+	
+	
+	.circle_main{
+		font-family: pirulen;
+		font-size:10px;
+		color:white;
+		position: relative;
+		margin:0 auto;
+		width:100px;
+		height:100px;
+		border-radius: 50%;
+		background:rgba(15,94,110,.1);
+		transition: width 1s ,height 1s;
+		z-index: 1;
+	}
+	
+	
+	.change .circle_main{
+    width:110px;
+	height:110px;
+	}
+	
+	.circle_main:hover{
+	animation: vibrate .5s infinite ease-out;
+	}
+	
+	.bar_left{
+		position:absolute;
+		top:35px;
+		right:43px;
+		width: 4px;
+		height: 33px;
+		border-radius:2px;
+		box-shadow: 0 0 13px 3px rgba(0, 131, 177, 0.77);
+		transition:transform 1s, width 1s;
+		z-index:-2;
+        background: #fff;
+	}
+	
+	.change .bar_left{
+	width:240px;
+	transform: skewX(20deg);
+	animation: op 1s;	
+	}
+	
+	.bar_right{
+		position:absolute;
+		top:35px;
+		left:43px;
+		width: 4px;
+		height: 33px;
+		border-radius:2px;
+		box-shadow: 0 0 13px 3px rgba(0, 131, 177, 0.77);
+		transition: transform 1s,width 1s;
+		z-index: -1;
+        background: #fff;
+	}
+	
+	.change .bar_right{	
+	width:240px;
+	transform: skewX(-20deg);
+	animation: op 1s;
+	}
+	
+	
+	@keyframes op{
+		0%{opacity:0;}
+		20%{opacity:0;}
+		100%{opacity:1;}
+	}
+	
+.arc1 {
+  content:"";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 4.92%;
+  top: 4.92%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  animation: rotate 4s linear infinite;
+  text-align: center;
+  line-height: 129px;
+}
+	
+.line1 {
+  border: 2px solid white ;
+  border-left: 1px solid transparent;
+  animation: rotate 5s linear infinite;
+}
+
+.line2 {
+  border: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  animation: rotate_anti 4s linear infinite;
+}
+
+.line3 {
+  border: 2px solid white;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  animation: rotate 3s linear infinite;
+}
+
+.line4 {
+  border: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  animation: rotate_anti 2s linear infinite;
+}
+	
+	/*main reactor*/
+	
+		
+.reactor {
+  position:absolute;
+  background:#fff;
+  width: 30%;
+  height: 30%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(2, 255, 255, 0.15);
+  margin:30%;
+  cursor: pointer;
+}
+.change .reactor{
+		 animation: flicker .2s infinite;
+	}
+	
+.reacttext{
+		opacity:0;
+		position:absolute;
+		top:25%;
+		margin:0 auto;
+		color:rgba(0,0,0,1);
+		font-size:14px;
+		font-weight: 900;
+		font-family: destructob;		
+		transition: opacity 1s;
+			}
+
+	.change .reacttext{
+		opacity:1;
+	}
+	
+	
+	/* Navigation css*/
+	
+	.bar_left>ul{
+		padding: 0;
+		margin:10px 70px 0 0px;
+		list-style:none;
+		transform: skewX(-20deg);
+		
+	}
+	
+	.bar_right>ul{
+		padding:0;
+		margin:10px 0 0 70px;
+		list-style:none;
+		transform: skewX(20deg);
+		}
+	
+	li{margin:auto;
+	}
+
+	nav li a:hover{
+		letter-spacing:2px;
+	}
+	
+	.nav_top{
+		display:none;
+		flex-direction: row;
+	}
+	
+	.change .nav_top{display: flex;}
+	
+	.nav_bottom{
+		display:none;
+		flex-direction:row-reverse;
+	}
+	.change .nav_bottom{display: flex;}
+
+		
+	/* ham style */
+	
+	.hamContainer{
+		position: absolute;
+		top:-6%;
+		transition:opacity 1s;
+	}
+	
+	.hbar1, .hbar2, .hbar3,.hbar4,.hbar5 {
+    height: 2px;
+   background-color:black;
+	border-radius: 4px;
+	margin:4px auto;
+		
+		
+}
+
+ 
+	.hbar1 {
+width:15px;
+animation: a 1s infinite;
+animation-delay: .5s;
+	
+}
+
+	
+
+	.hbar2 {
+	width:20px;
+	animation:a 1s infinite;
+	animation-delay: .5s;}
+
+	.hbar3 {
+	width: 30px;
+	animation:a 1s infinite;
+	animation-delay: .5s;
+	}
+
+	.hbar4 {
+	width:20px;
+	animation:a 1s infinite;
+	animation-delay: .5s;
+	}
+
+	.hbar5 {
+	width:15px;
+	animation:a 1s infinite;
+	animation-delay: .5s;
+	}
+	
+	.change .hamContainer{
+		opacity:0;
+	}
+
+	
+
+
+@keyframes a {
+    0% {
+        
+        transform: scaleX(1) skewX(10deg)  ;
+    }
+    50% {
+        
+        transform: scaleX(.7) skewX(20deg)  ;
+    }
+    100% {
+        
+        transform: scaleX(1) skewX(30deg);
+    }
+}
+
+	
+	/*ham style ends*/
+	
+	
+	/*Animations*/
+	
+		@keyframes flicker{
+  0% {
+    box-shadow: 0px 0px 60px 25px rgba(150, 255, 255, 0.5), inset 0px 1px 4px 2px rgba(21, 211, 233, 0.3);
+  }
+  40% {
+    box-shadow: 0px 0px 60px 25px rgba(150, 255, 255, 0.5), inset 0px 1px 4px 2px rgba(21, 211, 233, 0.3);
+  }
+  50% {
+    box-shadow: 0px 0px 50px 17px rgba(150, 255, 255, 0.5), inset 0px 1px 100px 2px rgba(21, 211, 233, 0.3);
+  }
+  60% {
+    box-shadow: 0px 0px 60px 25px rgba(150, 255, 255, 0.5), inset 0px 1px 4px 2px rgba(21, 211, 233, 0.3);
+  }
+  100% {
+    box-shadow: 0px 0px 60px 25px rgba(150, 255, 255, 0.5), inset 0px 1px 4px 2px rgba(21, 211, 233, 0.3);
+  }
+}
+	
+	
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+	
+	
+@keyframes rotate_anti {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+	
+	
+	
+/* Animation Ends*/
+
+.logotip {
+    width: 150%;
+    transform: scale(2);
+}
+
+.reacttext{
+    position: relative;
+}

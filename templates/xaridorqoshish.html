@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Admin Panel - Xaridor qo'shish {% endblock title %}
+
+{% block content %}
+
+<div class="right_col" role="main">
+  <div class="">
+      <div class="clearfix"></div>
+
+      <div class="row">
+          <div class="col-md-12 col-sm-12">
+              <div class="x_panel">
+                  <div class="x_title">
+                      <h2>Xaridor qo'shish </h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                          </li>
+                          <li><a class="close-link"><i class="fa fa-close"></i></a>
+                          </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                      <form class="" action="" method="post"  enctype="multipart/form-data" novalidate>{% csrf_token %}
+                          <p>Ma'lumot to'ldirilayotganida <b><code>BO'SH JOY</code></b> qolib ketishi mumkin emas!
+                          </p>
+                          <span class="section">To'ldirish</span>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align"><span class="required"></span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  {{ form|crispy }}
+                              </div>
+                          </div>
+
+                          
+                          <div class="field item form-group">
+        <label class="col-form-label col-md-3 col-sm-3  label-align"><span class="required"></span></label>
+        <div class="col-md-6 col-sm-6">
+          <!-- <input class="form-control" type="text" id="text" name="text" required /> -->
+          
+          <!-- <span style="position: absolute;right:15px;top:7px;" onclick="hideshow()" >
+            <i id="slash" class="fa fa-eye-slash"></i>
+            <i id="eye" class="fa fa-eye"></i>
+          </span> -->
+        </div>
+      </div>
+
+                          <div class="ln_solid">
+                              <div class="form-group">
+                                  <div class="col-md-6 offset-md-3">
+                                      <button type='submit' class="btn btn-primary w-25">Qo'shish</button><button type='reset' class="btn btn-success w-25">Tozalash</button>
+
+                                      <!-- <button class="btn btn-light" onclick="window.print();"><i class="fa fa-print"></i> Print</button> -->
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- <div class="row no-print">
+                            <div class=" ">
+                              <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+                              <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
+                              <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                            </div>
+                          </div> -->
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{% static 'js/multifield.js' %}"></script>
+<script src="{% static 'js/validator.js' %}"></script>
+
+<!-- Javascript functions -->
+<script>
+function hideshow(){
+var password = document.getElementById("password1");
+var slash = document.getElementById("slash");
+var eye = document.getElementById("eye");
+
+if(password.type === 'password'){
+password.type = "text";
+slash.style.display = "block";
+eye.style.display = "none";
+}
+else{
+password.type = "password";
+slash.style.display = "none";
+eye.style.display = "block";
+}
+
+}
+</script>
+
+<script>
+// initialize a validator instance from the "FormValidator" constructor.
+// A "<form>" element is optionally passed as an argument, but is not a must
+var validator = new FormValidator({
+"events": ['blur', 'input', 'change']
+}, document.forms[0]);
+// on form "submit" event
+document.forms[0].onsubmit = function(e) {
+var submit = true,
+  validatorResult = validator.checkAll(this);
+console.log(validatorResult);
+return !!validatorResult.valid;
+};
+// on form "reset" event
+document.forms[0].onreset = function(e) {
+validator.reset();
+};
+// stuff related ONLY for this demo page:
+$('.toggleValidationTooltips').change(function() {
+validator.settings.alerts = !this.checked;
+if (this.checked)
+  $('form .alert').remove();
+}).prop('checked', false);
+
+</script>
+
+<!-- jQuery -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'js/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'js/nprogress.js' %}"></script>
+<!-- jQuery custom content scroller -->
+<script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="{% static 'js/custom.min.js' %}"></script>
+
+{% endblock content %}
